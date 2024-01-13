@@ -1,10 +1,9 @@
-import Navbar from '../components/Navbar';
+import Column from "../components/Column";
 
 const Home = () => {
     return (
         <div>
-            <Navbar />
-            kjkj
+            <Column heading='Incomplete' />
         </div>
     );
 };
