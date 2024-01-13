@@ -49,6 +49,22 @@ const Cards = () => {
             lorem: 'Lorem ipsum dolor sit amet console...',
             task: '1/2',
             avatar: img1
+        },
+        {
+            id: 7,
+            clientName: 'Client Name',
+            sadikIstiak: 'Sadik Istiak',
+            lorem: 'Lorem ipsum dolor sit amet console...',
+            task: '1/2',
+            avatar: img1
+        },
+        {
+            id: 8,
+            clientName: 'Client Name',
+            sadikIstiak: 'Sadik Istiak',
+            lorem: 'Lorem ipsum dolor sit amet console...',
+            task: '1/2',
+            avatar: img1
         }
     ]
     return (
