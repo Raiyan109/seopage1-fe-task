@@ -1,9 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ImAttachment } from "react-icons/im";
 import Modal from "./Modal";
+import axios from "axios";
+
 // eslint-disable-next-line react/prop-types
 const Card = ({ data }) => {
     const [showModal, setShowModal] = useState(false)
+    const [totalFiles, setTotalFiles] = useState()
+
+
+    useEffect(() => {
+        const getFiles = async () => {
+            const { data } = await axios.get('http://localhost:5000/api/files')
+            // eslint-disable-next-line react/prop-types
+            setTotalFiles(data.totalFiles);
+        }
+        getFiles()
+    }, [])
     return (
         <div className="bg-white w-full h-28 rounded-sm px-1 py-3 space-y-6">
             <div className="flex items-center justify-between">
@@ -38,7 +51,7 @@ const Card = ({ data }) => {
                 </div>
                 <div className="flex items-center gap-1 cursor-pointer" onClick={() => setShowModal(true)}>
                     <ImAttachment size={10} />
-                    <h3 className="text-[10px] font-medium">25</h3>
+                    <h3 className="text-[10px] font-medium">{totalFiles}</h3>
                 </div>
                 {showModal &&
                     <Modal setShowModal={setShowModal} showModal={showModal} />
