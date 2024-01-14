@@ -66,9 +66,7 @@ const Modal = ({ showModal, setShowModal }) => {
 
                         <input type="file" name="files" onChange={handleChange} multiple />
                         <div className="flex items-center justify-center">
-                            <button className='bg-slate-400 text-slate-900 rounded-lg text-lg font-bold md:font-normal py-1 px-7 ' >
-                                Check
-                            </button>
+
                             <button type="submit" className='bg-slate-400 text-slate-900 rounded-lg text-lg font-bold md:font-normal py-1 px-7 '>
                                 Upload
                             </button>
