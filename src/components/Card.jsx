@@ -39,7 +39,7 @@ const Card = ({ data }) => {
                     <p className="text-[9px]">{data.task}</p>
                 </div>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center justify-around gap-3">
                 <img src={data.avatar} alt="" className="w-2 h-2 object-contain" />
                 <img src={data.avatar} alt="" className="w-2 h-2 object-contain" />
                 <div className="bg-gray-300 w-4 h-4 rounded-full flex justify-center items-center">
